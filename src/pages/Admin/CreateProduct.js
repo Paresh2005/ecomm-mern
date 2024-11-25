@@ -23,7 +23,7 @@ const CreateProduct = () => {
 
   const getAllCategory= async()=>{
     try{
-      const {data} = await axios.get("/api/v1/category/get-category")
+      const {data} = await axios.get("/https://collegejaankarclient.onrender.com/api/v1/category/get-category")
       if(data?.success){
         setCategories(data?.category);
       }
@@ -51,7 +51,7 @@ const handleCreate = async (e) => {
     productData.append("photo", photo);
     productData.append("category", category);
     const { data } = axios.post(
-      "/api/v1/product/create-product",
+      "/https://collegejaankarclient.onrender.com/api/v1/product/create-product",
       productData
     );
     if (data?.success) {
